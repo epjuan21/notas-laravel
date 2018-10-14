@@ -1,0 +1,26 @@
+nav {
+	background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
+}
+
+.footer {
+    width: 100%;
+    background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
+}
+
+.footer a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer span {
+	color: white;
+}
+
+.h1, .h2, .h3, .h4 {
+	margin-top: 3rem;
+}
+
+.j-fixed {
+	overflow: auto;
+	display: block;
+}

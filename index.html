@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<title>Laravel - Notas</title>
+	</head>
+	<body>
+
+		<!-- Header -->
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+				<img src="img/LaravelLogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				Laravel
+				</a>
+			</div>
+		</nav>
+
+		<div class="container">
+
+			<div class="row">
+
+				<!-- Inicio Navegación -->
+
+				<div class="col-3 col-md-3 pt-4 j-fixed">
+
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Instalación</a>
+							<ul class="nav flex-column ml-3">
+								<li class="nav-item">
+									<a class="nav-link active" href="#instalar">Instalar Laravel</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#iniciar">Iniciar Proyecto</a>
+							<ul class="nav flex-column ml-3">
+								<li class="nav-item">
+									<a class="nav-link" href="#crear">Crear Poyecto</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#iniciar-servidor">Iniciar Servidor</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#configuracion-inicial">Configuración Inicial</a>
+							<ul class="nav flex-column ml-3">
+								<li class="nav-item">
+									<a class="nav-link" href="#nombre-aplicacion">Nombre aplicación</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#zona-horaria">Zona Horaria</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#lenguaje">Lenguaje</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#laravel-mix">Laravel Mix</a>
+							<ul class="nav flex-column ml-3">
+								<li class="nav-item">
+									<a class="nav-link" href="#requisitos">Requisitos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#dependencias">Dependencias</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#compilar">Compilar</a>
+									<ul class="nav flex-column ml-3">
+										<li class="nav-item">
+											<a class="nav-link" href="#compilacion-manual">Compilación Manual</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#compilacion-automatica">Compilación Automática</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#browsersync">Configurar BrowserSync</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#sql">SQL Server</a>
+							<ul class="nav flex-column ml-3">
+								<li class="nav-item">
+									<a class="nav-link active" href="#requisitos-sql">Requisitos Windows</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#compatibilidad">Compatibilidad Drivers</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#drivers-sql">Drivers</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#referencias-sql">Referencias</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#instalacion-sql">Instalación</a>
+									<ul class="nav flex-column ml-3">
+										<li class="nav-item">
+											<a class="nav-link" href="#instalar-drivers-sql">Instalar Drivers</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="#seleccion-archivos-sql">Selección archivos</a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#configuracion-sql-laravel">Configuración</a>
+									<ul class="nav flex-column ml-3">
+										<li class="nav-item">
+											<a class="nav-link" href="#archivoEnv">Archivo .env</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+			
+				</div>
+
+				<!-- Inicio Navegación -->
+
+				<div class="col pt-4">
+						
+					<h1>Requisitos de Instalación</h1>
+					<hr>
+
+					<ul>
+						<li>Composer</li>
+						<li>PHP 7.2.4</li>
+					</ul>
+
+					<h2 class="h2" id="instalar">Instalar Laravel</h2>
+					<p>Ejecutar el siguiente comando en la Terminal</p>
+
+					<code>composer global require <mark>"laravel/installer"</mark></code>
+
+					<h1 class="h1" id="iniciar">Iniciar Proyecto</h1>
+					<small>Crear el primer proyecto e iniciar el servidor de prueba</small>
+					<hr>
+
+					<h2 class="h2" id="crear">Crear Proyeto</h2>
+
+					<p>
+						Para crear un nuevo proyecto en Laravel, se debe estar ubicado en la 
+						ruta donde se desea que este el proyecto y ejecutar el siguiente comando:
+					</p>
+
+					<code>laravel new <mark>NombreProyecto</mark></code>
+	
+					<h2 class="h2" id="inicar-servidor">Iniciar servidor de prueba</h2>
+
+					<p>
+						Si tiene PHP instalado localmente y desea utilizar el servidor de desarrollo 
+						incorporado de PHP para servir su aplicación, puede usar el comando <code><mark>serve</mark></code> de Artisan. 
+						Este comando iniciará un servidor de desarrollo en http: // localhost: 8000:</p>
+
+					<p><code>php artisan serve</code></p>
+
+					<p>Para ejecutar este comando se debe estar ubicado en la carpeta del proyecto</p>
+
+					<h1 class="h1" id="configuracion-inicial">Configuracion Inicial</h1>
+					<hr>
+
+					<h2 class="h2" id="nombre-aplicacion">Nombre de la aplicación</h2>
+
+					<p>Para cambiar el nombre de la aplicación se ejecuta el siguiente comando en la terminal</p>
+
+					<code>php artisan app:name <mark>NombreAplicacionn</mark></code>
+
+					<h2 class="h2" id="zona-horaria">Zona Horaria</h2>
+
+					<p>
+						Para configurar la zona horaria o timezone vamos al archivo <code>config/app.php</code> 
+						y buscamos la siguiente línea y la cambiamos por nuestra zona.
+					</p>
+
+					<p><code>'timezone' => 'UTC',</code></p>
+
+					<p>
+						podemos buscar nuestra zona horaria en <a href="http://php.net/manual/es/timezones.php" target="_blank">http://php.net/manual/es/timezones.php</a>
+					</p>
+						
+					<p>
+						Luego de encontrarla quedaría asi:
+					</p>
+
+					<p><code>'timezone' => 'America/Bogota',</code></p>
+
+					<h2 class="h2" id="lenguaje">Lenguaje</h2>
+					
+					<p>
+						Para el lenguaje por defecto de nuestra aplicación vamos al archivo <code>config/app.php</code> y buscamos la siguiente línea
+					</p>
+
+					<p><code>'locale' => 'en'</code> y luego la cambiamos por <code>'locale' => 'es',</code></p>
+
+					<h3 id="añadir-lenguaje">Añadir nuestro lenguaje</h3>
+						
+					<p>
+						Luego de cambiar el lenguaje en <code>config/app.php</code> debemos añadir la carpeta con 
+						los archivos en el lenguaje seleccionado en la ruta <code>resources/Lang</code>
+					</p>
+
+					<p>
+						En la URL 
+						<a href="https://github.com/caouecs/Laravel-lang" target="_blank">https://github.com/caouecs/Laravel-lang</a>
+						se encuentran algunos lenguajes que podemos usar para nuestro proyecto, podemos buscar el archivo es en la ruta src
+					</p>
+
+					<h1 class="h1" id="laravel-mix">Laravel Mix</h1>
+					<small>Configurar Laravel Mix para Compilar archivos SASS y Javascript y para recargar el navegador automáticamente</small>
+					<hr>
+
+					<h2 class="h2" id="requisitos">Requisitos</h2>
+
+					<ul>
+						<li><a href="https://nodejs.org/es/" target="_blank">Node JS</a></li>
+					</ul>
+
+					<h2 class="h2" id="dependencias">Instalar dependencias</h2>
+
+					<p>
+						Desde la Terminal y ubicados en la carpeta del proyecto, ejecutar el comando 
+						<code>npm install</code>, con el fin de instalar todas las dependencias del archivo <code>package.json</code>
+						entre las que se incluyen
+					</p>
+
+					<ul>
+						<li>laravel-mix</li>
+						<li>vue</li>
+						<li>webpack-dev-server</li>
+						<li>browser-sync</li>
+						<li>browser-sync-webpack-plugin</li>
+					</ul>
+
+					<p>
+						Luego de ejecutar <code>npm install</code> se crea la carpeta <mark>node_modules</mark> la cual es 
+						ignorada al subir al repositorio git. Esto se configura en el archivo <code>.gitignore</code>
+					</p>
+
+					<h2 class="h2" id="compilar">Compilar</h2>
+
+					<p>En el archivo <code>webpack.mix.js</code> se encuentra la configuración de Laravel Mix.</p>
+
+					<p>
+						En el siguiente archivo se observa la configuración para compilar el código existente
+						en el archivo <code>app.js</code> y el archivo <code>app.scss</code> .Se define la ruta de origen y la ruta de destino.
+					</p>
+						
+					<p>
+						<code>
+							mix.js('resources/assets/js/app.js', 'public/js') <br>
+							.sass('resources/assets/sass/app.scss', 'public/css');
+						</code>
+					</p>
+
+					<h3 class="h3" id="compilacion-manual">Compilación Manual</h3>
+
+					<p>Ejecutar el comando</p>
+
+					<code>npm run dev</code>
+
+					<h3 class="h3" id="compilacion-automatica">Compilación Automática</h3>
+
+					<p>
+						La compilación automática consiste en que la terminal escucha de manera activa cualquier 
+						cambio que se realice en los archivos <code>app.js</code> y <code>app.scss</code>. 
+						Al detectar un cambio se compila automáticamente. Para ello en la terminal se ejecuta el comando
+					</p>
+
+					<p><code>npm run watch</code></p>
+
+					<h2 class="h2" id="browsersync">Configurar BroserSync</h2>
+
+					<p>En el archivo <code>webpack.mix.js</code> escribir el siguiente código</p>
+
+					<p>
+					<pre>
+						<code>
+
+mix.browserSync({
+	proxy: 'localhost:8000',
+	browser: 'chrome.exe'
+}
+
+						</code>
+					</pre>
+					</p>
+
+					<p>En Proxy se escribe la dirección URL donde se ejecuta el proyecto</p>
+					<p>En Browser se escribe el nombre del navegador con el que se desea trabajar</p>
+
+					<h1 class="h1" id="sql">SQL Server</h1>
+					<small>Conexión de Laravel 5.6 con SQL Server, teniendo PHP 7.2.4</small>
+					<hr>
+
+					<h2 class="h2" id="requisitos-sql">Requisitos Windows</h2>
+
+					<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=56729" target="_blank">Microsoft Drivers 5.2 for PHP for SQL Server</a></p>
+					<p><a href="https://www.microsoft.com/es-ES/download/details.aspx?id=56567">Microsoft ODBC Driver 17 for SQL Server</a></p>
+
+					<h2 class="h2" id="compatibilidad">Compatibilidad de los Drivers</h2>
+					
+					<p><strong>Microsoft Drivers 5.2 for PHP for SQL Server</strong></p>
+
+					<p>Este Driver es compatible con las siguientes versiones de <strong>PHP</strong></p>
+
+					<ul>
+						<li>7.0.0+</li>
+						<li>7.1.0+</li>
+						<li>7.2.2+</li>
+						<li>7.2.1+</li>
+					</ul>
+
+					<p>Este Driver es compatible con las siguientes versiones de <strong>SQL Server</strong></p>
+
+
+					<ul>
+						<li>SQL Server 2008 R2</li>
+						<li>SQL Server 2012</li>
+						<li>SQL Server 2014</li>
+						<li>SQL Server 2016</li>
+						<li>SQL Server 2017</li>
+					</ul>
+
+					<p>Este driver es compatible con los siguientes <strong>Sistemas Operativos</strong></p>
+
+					<ul>
+						<li>Windows 8.1</li>
+						<li>WIndows 10</li>
+						<li>Windows Server 2012</li>
+						<li>WIndows Server 2012 R2</li>
+						<li>Windows Server 2016</li>
+					</ul>
+
+					<p><strong>Microsoft ODBC Driver 17 fot SQL Server</strong></p>
+
+					<p>Este Driver es compatible son las siguientes versiones del Driver de PHP para SQL Server</p>
+
+					<ul>
+						<li>Microsoft Drivers 5.2 for PHP for SQL Server</li>						
+					</ul>
+
+					<h2 class="h2" id="drivers-sql">Drivers</h2>
+
+					<p><strong>Microsoft Drivers 5.2 for PHP for SQL Server</strong> contiene los siguientes Drivers compatibles con PHP 7.2.1+</p>
+
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Driver File</th>
+								<th>PHP Version</th>
+								<th>Thread safe?</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<code>32-bit php_sqlsrv_72_nts.dll</code><br>
+									<code>32-bit php_pdo_sqlsrv_72_nts.dll</code>
+								</td>
+								<td>7.2</td>
+								<td>no</td>
+							</tr>
+							<tr>
+								<td>
+									<code>32-bit php_sqlsrv_72_ts.dll</code><br>
+									<code>32-bit php_pdo_sqlsrv_72_ts.dll</code>
+								</td>
+								<td>7.2</td>
+								<td>si</td>
+							</tr>
+							<tr>
+								<td>
+									<code>64-bit php_sqlsrv_72_nts.dll</code><br>
+									<code>64-bit php_pdo_sqlsrv_72_nts.dll</code>
+								</td>
+								<td>7.2</td>
+								<td>no</td>
+							</tr>
+							<tr>
+								<td>
+									<code>64-bit php_sqlsrv_72_ts.dll</code><br>
+									<code>64-bit php_pdo_sqlsrv_72_ts.dll</code>
+								</td>
+								<td>7.2</td>
+								<td>si</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2 class="h2" id="referencias-sql">Referencias</h2>
+						
+					<p><a href="https://docs.microsoft.com/en-us/sql/connect/php/system-requirements-for-the-php-sql-driver?view=sql-server-2017" target="_blank">System Requirements for the Microsoft Drivers for PHP for SQL Server​</a></p>
+					<p><a href="https://docs.microsoft.com/en-us/sql/connect/php/download-drivers-php-sql-server?view=sql-server-2017" target="_blank">Download the Microsoft Drivers for PHP for SQL Server​</a></p>
+
+						
+					<h3 class="h3" id="instalacion-sql">Instalación</h3>
+					<small>Instalar Microsoft Drivers 5.2 for PHP for SQL Server y Microsoft ODBC Driver 17 for SQL Server</small>
+
+					<h4 class="h4" id="instalar-drivers-sql">Instalar Microsoft Drivers 5.2 for PHP for SQL Server</h4>
+						
+					<p class="lead">
+						Descargar Drivers desde el siguiente Link <a href="https://www.microsoft.com/en-us/download/details.aspx?id=56729" target="_blank">Microsoft Drivers 5.2 for PHP for SQL Server​</a>
+					</p>
+
+					<p>Una vez descargado, se ejecuta el archivo <strong>SQLSRV52.EXE</strong> y se descomprimen las librerías en alguna carpeta seleccionada.</p>
+
+					<h4 class="h4" id="seleccion-archivos-sql">Selección de archivos</h4>
+
+					<p>Para saber que archivos debemos utilizar debemos tener en cuenta lo siguiente</p>
+
+					<ul>
+						<li>Architecture</li>
+						<li>Thread Safety</li>
+					</ul>
+
+					<p>Lo anterior lo podemos verificar si ejecutamos <code>phpinfo()</code></p>
+
+					<div class="card" style="width: 28rem;">
+						<div class="card-body">
+							<h5 class="card-title">Architecture</h5>
+							<img src="Img/Architecture.png" alt="Architecture">
+						</div>
+					</div>
+	
+					<br>
+
+					<div class="card" style="width: 28rem;">
+						<div class="card-body">
+							<h5 class="card-title">Thread Safety</h5>
+							<img src="Img/ThreadSafety.png" alt="Architecture">
+						</div>
+					</div>
+					
+					<p>Para este caso necesitaremos los siguientes archivos</p>
+
+					<ul>
+						<li>php_sqlsrv_72_ts_x86.dll</li>
+						<li>php_pdo_sqlsrv_72_ts_x86.dll</li>
+					</ul>
+
+					<p>Que deben ser copiados en la siguiente ruta</p>
+
+					<p>Para <strong>XAMPP</strong> en C:\xampp\php\ext</p>
+
+					<p>Para <strong>WAMP</strong> en C:\wamp\bin\php\php7.2.4\ext</p>
+
+					<p>Luego debemos incluir la referencia a estos drivers en el archivo <code>php.ini</code> en la sección de extensiones</p>
+
+					<pre>
+						<code>
+extension=php_pdo_sqlsrv_72_ts_x86.dll
+extension=php_sqlsrv_72_ts_x86.dll
+						</code>
+					</pre>
+
+					<h3 class="h3" id="configuracion-sql-laravel">Configuración</h3>
+					<small>Configuración de SQL Server en Laravel</small>
+
+					<h4 class="h4" id="archivoEnv">Archivo .env</h4>
+
+					<p>En la raíz de la aplicación editamos el archivo <code>.env</code> de la siguiente manera</p>
+
+					<pre>
+						<code>
+DB_CONNECTION=sqlsrv
+DB_HOST=SERVIDOR01
+DB_PORT=1433
+DB_DATABASE=BETANIA
+DB_USERNAME=sa
+DB_PASSWORD=su480369*
+						</code>
+					</pre>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		
+		<!-- Footer -->
+
+		<footer class="footer py-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-auto mr-auto">
+						<span><i class="far fa-copyright"></i> Juan Fernando Ramírez Vélez</span>
+					</div>
+					<div class="col-auto ml-auto">
+						<a href="https://twitter.com/epjuan" target="_blank"><i class="fab fa-twitter-square fa-lg"></i></a>
+						<a href=""><i class="fab fa-github-square fa-lg"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>	
